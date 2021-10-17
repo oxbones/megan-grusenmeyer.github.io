@@ -1,37 +1,111 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Megan's Amazing Website</title>
+        <style>
+    body {
+        background: rgb(125, 198, 205);
+        color: rgb(45, 45, 45);
+        padding: 10px;
+        font-family: arial;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(239, 80, 41);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        display: flex;
+        padding: 10px;
+    }
+    nav h1 {
+        display: flex;
+        align-items: center;
+        color: white;
+        flex: 1;
+        margin: 0;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(245, 238, 219);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 200px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    h2, h3 {
+        margin: 0px;
+    }
+          
+    /*image*/
+    img {
+    border: 2px solid black;
+    border-radius: 5px;}
+</style>
+
+        <title>Megan's Magnificent Website</title>
     </head>
     
     <body>
         <div id="all-contents"> 
             <nav>
-
+                <h1>Megan's Magnificent Website</h1>
+                <ul>
+                    <li>
+                        <a href="https://sapphire-bat-qvc6ny19.ws-us17.gitpod.io/"> Home </a>
+                    </li>
+                    <li>
+                      <a href="portfolio.html"> Portfolio </a>
+                    </li>
+                </ul>
             </nav>
-
+    
+          
             <main>
                 <div class="sidebar">
-      
+                    <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-08/23/17/asset/d998c701cfe2/anigif_sub-buzz-708-1629741115-26_preview.gif?output-quality=auto&output-format=auto&downsize=360:*">
                 </div>
-
+            
                 <div class="content">
-                    <h2> 
-                      Megan Grusenmeyer
-                    </h2>
-                  
-                    <p> 
-                    Student at Operation Spark
-                    </p>
-                  
-                    <div id="interests">
-                      <h3>Interests</h3>
-                      <ul> 
-                        <li>Boats</li>
-                        <li>Biking</li>
-                        <li>Astronomy</li>
-                      </ul>
-                    </div> 
+                    <h2>Megan Grusenmeyer </h2> 
+
+                    <p>Student at Operation Spark</p>
+                    
+                    <div class = "interests">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>sailing</li>
+                            <li>coding</li>
+                            <li>mtn biking</li>
+                            <li>stargazing</li>
+                            <li>cloud spotting</li>
+                            <li>soaring/gliding</li>
+                        </ul>
+                    </div>
                 </div>
             </main>
         </div>
