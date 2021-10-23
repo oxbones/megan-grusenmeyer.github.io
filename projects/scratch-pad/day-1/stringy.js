@@ -2,42 +2,34 @@
 
 'use strict';
 
-/**
- * IN CLASS EXERCISE: stringy.js
- */
+//IN CLASS EXERCISE: stringy.js
 
-/**
- * Given an input String, return its length.
- *
- * TIP: In JavaScript, how can we decipher the length of a String?
- * work?
- */
+//Given an input String, return its length.
+
 function length(string) {
     // YOUR CODE BELOW HERE //
     
-
+return string.length; 
 
     // YOUR CODE ABOVE HERE //
 }
 
-/**
- * Given an input String, return a new String forced to lowercase.
- */
+//Given an input String, return a new String forced to lowercase
+
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+return string.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
 
-/**
- * Given an input String, return a new String forced to uppercase.
- */
+//Given an input String, return a new String forced to uppercase
+
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -58,7 +50,7 @@ function toUpperCase(string) {
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+return (string.toLowerCase()).replace(/\s+/g, '-');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -75,10 +67,16 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
-function beginsWith(string, char) {
+ function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-    
+    //force all to lowercase
+    var lowerString = string.toLowerCase();
+    var lowerChar = char.toLowerCase();
+    //split the string into character array
+    var arr = lowerString.split("");
+    //compare array[0] to char
+    return arr[0] === lowerChar;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -97,8 +95,14 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
+    
+    //force all to lowercase
+    var lowerString = string.toLowerCase();
+    var lowerChar = char.toLowerCase();
+    //split the string into character array
+    var arr = lowerString.split("");
+    //compare array[0] to char
+    return arr[arr.length - 1] === lowerChar;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -111,7 +115,7 @@ function endsWith(string, char) {
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    return stringOne.concat(stringTwo);
 
     // YOUR CODE ABOVE HERE //
 }

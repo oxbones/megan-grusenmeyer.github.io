@@ -12,21 +12,14 @@
  * or passing test update.
  */
 
-/** 
- * Given an input value, print the value to the screen using console.log().
- */
+
+//Given an input value, print the value to the screen using console.log()
+
 function print(value) {
   // YOUR CODE BELOW HERE //
   console.log(value);
-  
-  
   // YOUR CODE ABOVE HERE //
 }
-
-
-
-
-
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
