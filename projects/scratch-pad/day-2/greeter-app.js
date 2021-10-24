@@ -33,14 +33,20 @@
  *      the exact case.
  */
 
-function greeter(hour) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function greeter(hour) {
+    if (hour >= 0 && hour <= 11) {
+      console.log("Good Morning!")
+    }
+    else if (hour > 11 && hour <= 16) {
+      console.log("Good Afternoon!")
+    }
+    else if (hour > 16 && hour <= 21) {
+      console.log("Good Evening!")
+    }
+    else {
+      console.log("Good Night!")
+    }
+  }
 
 /*
  * To test our greeter when developing, we need to fake some input data, ie, 
