@@ -123,37 +123,40 @@ function concat(stringOne, stringTwo) {
 /**
  * Given any number of Strings, return all of them joined together.
  *
- * Example:
- *
- *      join("my", "name", "is", "Ben"); // => "mynameisBen";
+ * Example:   join("my", "name", "is", "Ben"); // => "mynameisBen";
  *
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
-function join(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-    var args = Array.from(arguments);
 
-
-    // YOUR CODE ABOVE HERE //
-}
+ function join(stringOne, stringTwo) {
+   var args = Array.from(arguments); 
+   var str = ""
+   //iterate over args
+   for (var i = 0; i < args.length; i++) {
+        //add args[i] to str each time
+        str = str.concat(args[i])
+   }
+   return str;
+ }
 
 /**
  * Given two Strings, return the longest of the two.
  *
- * Example:
- *
- *      longest("ben", "maggie");   //-> "maggie"
+ * Example:    longest("ben", "maggie");   //-> "maggie"
  *
  * TIP: What property of the String do we need to compare?
  */
-function longest(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
 
-
-
-    // YOUR CODE ABOVE HERE //
-}
+ function longest(stringOne, stringTwo) {
+    //if else statement that compares stringOne.length and stringTwo.length
+    if (stringOne.length > stringTwo.length) {
+      return stringOne;
+    }
+    else {
+      return stringTwo;
+    }
+  }
 
 /**
  * Given two Strings, return 1 if the first is higher in alphabetical order than
@@ -162,14 +165,18 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
-function sortAscending(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
 
-
-
-    // YOUR CODE ABOVE HERE //
-}
-
+ function sortAscending(stringOne, stringTwo) {
+    if (stringOne < stringTwo) {
+      return 1;
+    }
+    else if (stringOne > stringTwo) {
+      return -1;
+    }
+    else {
+      return 0;
+    }
+  }
 
 /**
  * Given two Strings, return 1 if the first is lower in alphabetical order than
@@ -179,13 +186,16 @@ function sortAscending(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortDescending(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-
-
-
-
-    // YOUR CODE ABOVE HERE //
-}
+    if (stringOne > stringTwo) {
+        return 1;
+      }
+      else if (stringOne < stringTwo) {
+        return -1;
+      }
+      else {
+        return 0;
+      }
+    }
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
