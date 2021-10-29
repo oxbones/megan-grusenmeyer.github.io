@@ -12,13 +12,13 @@
  * TIP: In JavaScript, how can we decipher if a value is an Array? Can typeof
  * work?
  */
-function isArray(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+ function isArray(value) {
+    if(Array.isArray(value)){
+      return true
+    }
+    else {
+      return false
+    }
 }
 
 /** 
@@ -29,14 +29,18 @@ function isArray(value) {
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
  */
-function isObject(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function isObject(value) {
+    if (Array.isArray(value) || value == null || 
+    Object.prototype.toString.call(value) === "[object Date]") {
+      return false
+    }
+    else if (typeof value === "object") {
+      return true
+    }
+    else {
+      return false
+    }
+  }
 
 /** 
  * Given an input value, return true if is either an Array or an an Object 
@@ -44,14 +48,23 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
-function isCollection(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function isCollection(value) {
+    if (Array.isArray(value)) {
+      return true
+    }
+    else if (value == null) {
+      return false
+    }
+    else if (Object.prototype.toString.call(value) === "[object Date]") {
+      return false
+    }
+    else if (typeof value === "object") {
+      return true
+    }
+    else {
+      return false
+    }
+  }
 
 /**
  * Given an input value, return the type of the value as a String
@@ -72,14 +85,32 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
-function typeOf(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function typeOf(value) {
+    if (Array.isArray(value)) {
+      return "array"
+    }
+    else if (value == null) {
+      return "null"
+    }
+    else if (Object.prototype.toString.call(value) === "[object Date]") {
+      return "date"
+    }
+    else if (typeof value === "object") {
+      return "object"
+    }
+    else if (typeof value === "boolean") {
+      return "boolean"
+    }
+      else if (typeof value === "number") {
+      return "number"
+    }
+    else if (typeof value === "string") {
+      return "string"
+    }
+    else {
+      return "function"
+    }
+  }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

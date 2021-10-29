@@ -1,0 +1,19 @@
+{
+  "name": "lodown-megan-grusenmeyer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxbones/megan-grusenmeyer.github.io.git"
+  },
+  "author": "Megan Grusenmeyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxbones/megan-grusenmeyer.github.io/issues"
+  },
+  "homepage": "https://github.com/oxbones/megan-grusenmeyer.github.io#readme"
+}

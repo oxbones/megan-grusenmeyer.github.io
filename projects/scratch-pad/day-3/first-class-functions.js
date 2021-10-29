@@ -11,13 +11,16 @@
  * return a Function that tests whether a given value is greater than the 
  * base.
  */
+
 function createGreaterThanFilter(base) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function(value) {
+        if (value > base){ 
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }
 
 /** 
@@ -25,28 +28,34 @@ function createGreaterThanFilter(base) {
  * return a Function that tests whether a given value is less than the 
  * base.
  */
+
 function createLessThanFilter(base) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+        return function(value) {
+            if (value > base){ 
+                return false
+            }
+            else {
+                return true
+            }
+        }
+    }
 
 /** 
  * Given a startsWith character, which will be a single character, return a 
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
-function createStartsWithFilter(startsWith) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+
+ function createStartsWithFilter(startsWith) {
+    return function(word) {
+      if (startsWith.toUpperCase() === word[0].toUpperCase()) {
+        return true
+      }
+      else {
+        return false
+      }
+    }
+  }
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -54,12 +63,14 @@ function createStartsWithFilter(startsWith) {
  * character.
  */
 function createEndsWithFilter(endsWith) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function(word) {
+        if (endsWith.toUpperCase() === word[word.length - 1].toUpperCase()) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }
 
 /** 
@@ -69,14 +80,13 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
-function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function modifyStrings(strings, modify) {
+    var newArr = [];
+    for (var i = 0; i < strings.length; i++) {
+      newArr.push(modify(strings[i]))
+    }
+    return newArr;
+  }
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
@@ -87,14 +97,19 @@ function modifyStrings(strings, modify) {
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
-function allStringsPass(strings, test) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+ function allStringsPass(strings, test) {
+    var bool = [];
+    for (var i = 0; i < strings.length; i++) {
+    //console.log(strings[i])
+      bool.push(test(strings[i]));
+    }
+    if (bool.includes(false)){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
