@@ -2,8 +2,27 @@
 // range ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function range() {
-
+function range(start, end, step) {
+  //find min and max
+  var min = Math.min(start, end);
+  var max = Math.max(start, end);
+  var arr = [];
+  if(step > 0) {
+    for (var i = min; i <= max; i+=step) {
+      arr.push(i)
+    }
+  } else if (step <= 0) {
+    return [];
+  } else if (start === end) {
+    return arr;
+  } else {
+    //loop over range
+    for (var j = min; j <= max; j++) {
+      //push j into array
+      arr.push(j);
+    }
+  }
+  return arr;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -18,16 +37,35 @@ function sum() {
 // reverseArray ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function reverseArray() {
-
+function reverseArray(array) {
+  //constructive version
+  var reversedArr = [];
+  //loop over array backwards
+  for (var i = array.length - 1; i >= 0; i--) {
+    //push values of newArr[i] to reversedArr
+    reversedArr.push(array[i]);
+  }
+  return reversedArr; 
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // reverseArrayInPlace /////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function reverseArrayInPlace() {
-
+function reverseArrayInPlace(array) {
+  //destructive version
+  var reversedArr = [];
+  //loop over array backwards
+  for (var i = array.length - 1; i >= 0; i--) {
+    //push values of newArr[i] to reversedArr
+    reversedArr.push(array[i]);
+  }
+  //loop over reversedArr
+  for(var j = 0; j <= reversedArr.length - 1; j++) {
+  //splice reversedArr[i] into arr at i
+   array.splice(j, 1, reversedArr[j]);
+  }
+  return array; 
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -14,14 +14,14 @@ triangle:
 #######
 */
 function triangles(num) {
-  //creating var pound empty array
+  //create empty string
   var pound = ""; 
-  //loop over pound 0-6
+  //loop over pound
   for (var i = 0; pound.length < num; i++) {
     //redefine as concatenated with another pound 
     pound = pound.concat("#");
-    //return pound
-    console.log(pound);
+  //call to console each row
+  console.log(pound);
   }
 }
 
@@ -52,8 +52,20 @@ function fizzBuzz() {
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard() {
 
+function drawChessboard(num) {
+  var chess = "";
+  for (var i = 0; i < num; i++) {
+    for (var j = 0; j < num; j++) {
+      if ((i + j) % 2 === 0) {
+        chess += " ";
+      } else {
+        chess += "#";
+      }
+    }
+    chess += "\n";
+  }
+  console.log(chess);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
