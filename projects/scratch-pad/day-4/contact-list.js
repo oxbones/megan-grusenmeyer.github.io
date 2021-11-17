@@ -17,7 +17,8 @@ that manages contacts. The contact-list object should have the following methods
     4. removeContact(contact): takes a contact object to be removed from 
        the contact-list.
     
-    5. add a printAllContactNames() Function to your makeContactList() factory. The printAllContactNames() Function should 
+    5. add a printAllContactNames() Function to your makeContactList() factory. 
+      The printAllContactNames() Function should 
        return a String formated with all the full-names of the separated 
        with a line-break, like so:
        
