@@ -2,7 +2,7 @@
 //CONTROL FLOW
 
 //0. If - a true/false conditional statement that can be used in functions to create a condition 
-//          under which code should be executed
+//          under which code should be executed. Always execute if their condition is true. 
                 var eat = function(mood){
                     if (mood === 'hungry') {
                         return 'eat something';
@@ -12,7 +12,7 @@
                 console.log(eat(mood)); // returns 'eat something'
 
 //1. Else-if - used in conjunction with if statements to create a more complex logic, a second 
-//          condition. 
+//          condition. This part of the code will only execute for the first true condition.
                 var window = function(insideTemp) {
                     if (insideTemp === 'hot') {
                         return 'open window';

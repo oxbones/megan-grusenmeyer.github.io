@@ -33,7 +33,14 @@
 //          an example of a for loop being used on an object. 
 
 //2. Forward vs Backward looping - when using a for loop, you can loop forwards or backwards over 
-//      your counter and/or an array. To loop backwards, set your start condition to the highest 
+//      your counter and/or an array. An example of a forward loop is 
+                function remove(arr, str) {
+                    for (var i = 0; i <= arr.length - 1;  i++) {
+                        if (arr[i] === str)
+                        arr.splice(i, 1)
+                    }
+                }
+//      To loop backwards, set your start condition to the highest 
 //      counter, your conditional statement to end the loop when you reach the smallest number, and
 //      your increment to decrement or get smaller until you reach the end condition. 
                 function reverseArray(array) {

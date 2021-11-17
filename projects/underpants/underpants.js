@@ -305,7 +305,6 @@ _.partition = function(array, func) {
   var truthyArr = [];
   var falseyArr = [];
   for (var i = 0; i < array.length; i++) {
-      //console.log(subArrays);
       if (func(array[i], i , array)) {
           truthyArr.push(array[i]);
         }  else if (func(array[i], i, array) === false) {
@@ -313,7 +312,6 @@ _.partition = function(array, func) {
         } 
     }
     subArrays.push(truthyArr, falseyArr);
-    // return subArray => [[truthy], [falsey]];
 return subArrays;
 }
 
